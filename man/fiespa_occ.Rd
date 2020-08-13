@@ -14,7 +14,7 @@ An object of class \code{RasterStack} of dimension 193 x 225 x 12.
 fiespa_occ
 }
 \description{
-A \link[raster:RasterStack-class]{RasterStack} of the expected probability of
+A \link[raster:Raster-classes]{RasterStack} of the expected probability of
 occurrence of Field Sparrow from the \href{https://ebird.org/science/status-and-trends}{eBird Status & Trends} project. Each of the 12
 layers in the stack represent the estimated occurrence for a given month of
 the year over a regular grid of points covering the full range of the
@@ -24,7 +24,7 @@ resolution.
 }
 \details{
 For further details on these data, and to access the data for more species,
-consult the \href{https://cornelllabofornithology.github.io/ebirdst}{documentation for the \code{ebirdst} package}.
+consult the \href{https://cornelllabofornithology.github.io/ebirdst/}{documentation for the \code{ebirdst} package}.
 }
 \references{
 Fink, D., T. Auer, A. Johnston, M. Strimas-Mackey, O. Robinson,

@@ -11,7 +11,7 @@
 #'
 #' For further details on these data, and to access the data for more species,
 #' consult the [documentation for the `ebirdst`
-#' package](https://cornelllabofornithology.github.io/ebirdst).
+#' package](https://cornelllabofornithology.github.io/ebirdst/).
 #'
 #' @source <https://ebird.org/science/status-and-trends>
 #' @references Fink, D., T. Auer, A. Johnston, M. Strimas-Mackey, O. Robinson,
@@ -24,8 +24,8 @@
 
 #' African Elephant utilization distributions
 #'
-#' A [RasterStack][raster::RasterStack-class] of the [utilization
-#' distribution](https://en.wikipedia.org/wiki/Utilization_distribution) for two
+#' A [RasterStack][raster::RasterStack-class] of [utilization
+#' distributions](https://en.wikipedia.org/wiki/Utilization_distribution) for two
 #' individual African Elephants in Etosha National Park in 2011. Cell values
 #' represent the probability density that an elephant was found at a given
 #' location within the year and the two layers contain data for the two
@@ -50,9 +50,9 @@
 
 #' Fisher utilization distributions
 #'
-#' A [RasterStack][raster::RasterStack-class] of the [utilization
-#' distribution](https://en.wikipedia.org/wiki/Utilization_distribution) for a
-#' single fisher in New York state over the course of nine nights in April 2011.
+#' A [RasterStack][raster::RasterStack-class] of [utilization
+#' distributions](https://en.wikipedia.org/wiki/Utilization_distribution) for a
+#' single Fisher in New York state over the course of nine nights in April 2011.
 #' Cell values represent the probability density that the individual was found
 #' at a given location between sunset and sunrise and the nine layers represent
 #' nine nights of data. Utilization distributions were generated using the
