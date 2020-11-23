@@ -1,5 +1,6 @@
 
-# colorist
+colorist
+========
 
 <!-- badges: start -->
 
@@ -19,7 +20,7 @@ status](https://travis-ci.org/mstrimas/colorist.svg?branch=master)](https://trav
 Maps are essential tools for communicating information about wildlife
 distributions in space and time. Visualizing patterns of stasis and
 change can be a challenge, however, especially when distributions
-exhibit different degrees of spatial-temporal overlap. The typical
+exhibit different degrees of spatiotemporal overlap. The typical
 strategy of layering distributional information from different time
 periods in a single map often results in occluded or muddied data,
 depending on how layers are combined. `colorist` is designed to address
@@ -35,7 +36,8 @@ space and time and can be used to address questions about where, when,
 and how consistently a species, individual, or group is likely to be
 found.
 
-## Installation
+Installation
+------------
 
 Install `colorist` from CRAN with:
 
@@ -51,7 +53,8 @@ from [GitHub](https://github.com/mstrimas/colorist) with:
 remotes::install_github("mstrimas/colorist")
 ```
 
-## Background
+Background
+----------
 
 The proliferation of tracking data and observations of wildlife
 populations have enabled remarkable growth in our understanding of how
@@ -69,7 +72,8 @@ metrics can be mapped to HCL (hue-chroma-luminance) colors in specific
 ways to ensure that data extracted from different raster layers have
 approximately equal perceptual weights in subsequent map visualizations.
 
-## Usage
+Usage
+-----
 
 `colorist` works on raster data stored as `RasterStack` objects.
 Individual raster layers might represent an ordered temporal sequence of
@@ -111,7 +115,6 @@ map_single(r, pal, lambda_i = -2)
 <img src="man/figures/README-elephant-1.png" width="100%" />
 
 ``` r
-
 # legend
 legend_timecycle(pal)
 ```

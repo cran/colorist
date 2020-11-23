@@ -10,7 +10,6 @@ knitr::opts_chunk$set(warning = FALSE,
 BUILD_VIGNETTES <- isTRUE(as.logical(Sys.getenv("BUILD_VIGNETTES")))
 
 ## ----fiespa-data--------------------------------------------------------------
-# install packages
 library(sf)
 library(ggplot2)
 library(colorist)
