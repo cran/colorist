@@ -1,14 +1,15 @@
-## ---- include = FALSE---------------------------------------------------------
-BUILD_VIGNETTES <- isTRUE(as.logical(Sys.getenv("BUILD_VIGNETTES")))
+## ----include = FALSE----------------------------------------------------------
 knitr::opts_chunk$set(warning = FALSE, 
                       message = FALSE,
                       collapse = TRUE,
-                      eval = BUILD_VIGNETTES,
                       comment = "#>",
                       out.width = "\\textwidth", 
                       fig.height = 4, 
                       fig.width = 7, 
-                      fig.align = "center")
+                      fig.align = "center",
+                      dpi = 300)
+# only build vignettes locally and not for R CMD check
+knitr::opts_chunk$set(eval = nzchar(Sys.getenv("BUILD_VIGNETTES")))
 
 ## ----libraries----------------------------------------------------------------
 #  library(colorist)
@@ -27,17 +28,17 @@ knitr::opts_chunk$set(warning = FALSE,
 ## ----ne-downloads, results = "hide"-------------------------------------------
 #  # download, transform, and crop spatial data
 #  countries <- ne_download(category = "cultural", type = "countries",
-#                           returnclass = "sf", scale = 50) %>%
+#                           returnclass = "sf", scale = 110) %>%
 #    st_transform(crs = st_crs(fiespa_occ)) %>%
 #    st_crop(st_bbox(fiespa_occ))
 #  
 #  rivers <- ne_download(category = "physical", type = "rivers_lake_centerlines",
-#                        returnclass = "sf", scale = 50) %>%
+#                        returnclass = "sf", scale = 110) %>%
 #    st_transform(crs = st_crs(fiespa_occ)) %>%
 #    st_crop(st_bbox(fiespa_occ))
 #  
 #  lakes <- ne_download(category = "physical", type = "lakes", returnclass = "sf",
-#                       scale = 50) %>%
+#                       scale = 110) %>%
 #    st_transform(crs = st_crs(fiespa_occ)) %>%
 #    st_crop(st_bbox(fiespa_occ))
 #  
@@ -51,7 +52,8 @@ knitr::opts_chunk$set(warning = FALSE,
 #    geom_sf(data = ocean, fill = "gray95", color = "black", size = 0.25) +
 #    geom_sf(data = rivers, size = 0.25, color = "gray35") +
 #    geom_sf(data = lakes, fill = "gray95", size = 0.25, color = "gray35") +
-#    geom_sf(data = st_as_sfc(st_bbox(fiespa_occ)), fill = NA, color = "black", size = 0.25)
+#    geom_sf(data = st_as_sfc(st_bbox(fiespa_occ)), fill = NA, color = "black",
+#            size = 0.25)
 #  
 #  # show the map
 #  print(map_fiespa_ne)
